@@ -4,9 +4,10 @@ import { PowerService } from 'src/power/power.service';
 @Injectable()
 export class DiskService {
 
-    constructor(public powerService: PowerService){}
+    constructor(private powerService: PowerService){}
 
     getData(){
-        this.powerService.supplyPower(10)
+        console.log("Drawing 20 watts of power from the Power Service")
+        this.powerService.supplyPower(20)
     }
 }
